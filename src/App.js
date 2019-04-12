@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import styled from 'styled-components';
+import styled, { css,keyframes } from 'styled-components';
 
 class App extends Component {
   render() {
@@ -34,10 +34,26 @@ cursor: pointer;
 }
 background-color: ${props=> (props.danger ? "#e74c3c":"#27ae60")};
 
+${props=> {
+  if(props.danger){
+    return css `animation:${rotation} 2s linear infinite`
+  }
+
+}}
+
 `;
 
 const Anchor = styled(Button.withComponent("a"))`
   text-decoration: none;
 `;
+
+const rotation = keyframes`
+  from {
+    transform: rotate(0deg)
+  } 
+  to {
+    transform: rotate(360deg)
+  }
+`
 
 export default App;
