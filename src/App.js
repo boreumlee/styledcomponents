@@ -2,15 +2,18 @@ import React, { Component} from 'react';
 import styled,{css,ThemeProvider} from 'styled-components';
 import theme from './theme';
 
+const Card = styled.div`
+  background-color: red;
+`;
+
 const Container = styled.div`
   height:100vh;
   width:100%;
   background-color:#ff7675;
+  ${Card}{
+    background-color: white;
+  }
 `;
-
-const Card = styled.div`
-  background-color: red;
-`
 
 const Button = styled.button`
   border-radius: 30px;
