@@ -1,12 +1,13 @@
 import React, { Component} from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 class App extends Component {
   render() {
     return (
       <Container>
         <Button danger>버튼이다@</Button>
-        <Button > HELLO</Button>     
+        <Button > HELLO</Button>
+        <Anchor href="http://google.com">go to 구글</Anchor>     
       </Container>
     );
   }
@@ -33,6 +34,10 @@ cursor: pointer;
 }
 background-color: ${props=> (props.danger ? "#e74c3c":"#27ae60")};
 
+`;
+
+const Anchor = styled(Button.withComponent("a"))`
+  text-decoration: none;
 `;
 
 export default App;
