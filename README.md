@@ -2,3 +2,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Styled Components
 
+[styled-components](https://www.styled-components.com/)
